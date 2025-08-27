@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+body { 
+  margin: 0; 
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; 
+  background: #fff0f6;
+  color: #333;
+  text-align: center;
+}
+.container { max-width: 720px; margin: 40px auto; padding: 24px; }
+h1 { margin: 0 0 12px; font-size: 28px; }
+button { 
+  font-size: 20px; 
+  padding: 12px 20px; 
+  border: none; 
+  background: #ff99cc; 
+  border-radius: 8px;
+  cursor: pointer; 
+  transition: 0.2s;
+}
+button:hover { background: #ff66b2; transform: scale(1.05); }
+#scoreBoard { margin-top: 20px; font-size: 20px; font-weight: bold; }
+.panel { margin-top: 16px; padding: 12px; min-height: 32px; font-style: italic; }
