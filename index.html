@@ -3,18 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flower Clicker Game</title>
+  <title>Flower Hunt</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <main class="container">
-    <h1>🌸 Flower Clicker Game 🌸</h1>
-    <p>Нажимай на цветы и зарабатывай очки!</p>
+    <header class="topbar">
+      <div class="stat">
+        <strong>Время:</strong> <span id="time">60</span> c
+      </div>
+      <div class="stat">
+        <strong>Счёт:</strong> <span id="score">0</span>
+      </div>
+      <div class="controls">
+        <button id="startBtn">Старт</button>
+        <button id="resetBtn" disabled>Сброс</button>
+      </div>
+    </header>
 
-    <button id="flowerBtn">🌹 Нажми меня!</button>
-    <div id="scoreBoard">Очки: 0</div>
+    <section class="order">
+      <h2>Заказ</h2>
+      <div class="order-row">
+        <div class="badge rose">Роза</div>
+        <div class="progress">
+          <div class="progress-bar" id="bar-rose" style="width:0%"></div>
+        </div>
+        <div class="qty"><span id="need-rose">0</span> шт</div>
+      </div>
+      <div class="order-row">
+        <div class="badge tulip">Тюльпан</div>
+        <div class="progress">
+          <div class="progress-bar" id="bar-tulip" style="width:0%"></div>
+        </div>
+        <div class="qty"><span id="need-tulip">0</span> шт</div>
+      </div>
+      <div class="order-row">
+        <div class="badge chrys">Хризантема</div>
+        <div class="progress">
+          <div class="progress-bar" id="bar-chrys" style="width:0%"></div>
+        </div>
+        <div class="qty"><span id="need-chrys">0</span> шт</div>
+      </div>
+    </section>
 
-    <div id="message" class="panel"></div>
+    <section class="grid" id="grid" aria-label="Поле 3x3">
+      <!-- 9 клеток создадим из JS -->
+    </section>
+
+    <section class="panel">
+      <div><strong>Комбо:</strong> x<span id="combo">1</span></div>
+      <div id="message"></div>
+      <div class="tips">
+        Правила: собирай только нужные позиции. Верный клик — очки и растёт комбо.
+        Промах — штраф и сброс комбо. Заказ нужно успеть до конца таймера.
+      </div>
+    </section>
   </main>
 
   <script src="./game.js" defer></script>
